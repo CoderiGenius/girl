@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+pro:
+  cupSize: A
+  age: 25
