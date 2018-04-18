@@ -19,16 +19,16 @@ public class HelloController {
 
     //@RequestMapping(value = "/hello", method = RequestMethod.GET)
     @GetMapping("/hello")
-    public ResponseEntity<Map<String,Object>> hello(@RequestParam(value = "id", required = false, defaultValue = "default") String parm1, String parm2){
+    public ResponseEntity hello(@RequestParam(value = "id", required = false, defaultValue = "default") String parm1, String parm2){
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("name", "zhangsan");
-        return new ResponseEntity<Map<String,Object>>(map, HttpStatus.valueOf(400));
+        return new ResponseEntity(map, HttpStatus.valueOf(400));
     }
 
 
     @GetMapping("/hello1")
-    public ResponseEntity<Object> hello1(@RequestParam(value = "id", required = false, defaultValue = "default") String parm1, String parm2){
-        return new ResponseEntity<Object>(new Girl(), HttpStatus.valueOf(404));
+    public ResponseEntity hello1(@RequestParam(value = "id", required = false, defaultValue = "default") String parm1, String parm2){
+        return new ResponseEntity(new Girl(), HttpStatus.valueOf(404));
     }
 
 
